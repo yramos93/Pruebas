@@ -1,0 +1,15 @@
+import requests
+res = requests.get('https://rickandomortyapi.com/')
+print(res)
+
+if res:
+    print('Response Ok')
+else:
+    print('Response Failed')
+    
+json = res.json()
+
+print(res.status_code)
+print(res.headers)
+print(res.text)
+print(json)
